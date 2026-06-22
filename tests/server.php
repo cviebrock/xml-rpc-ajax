@@ -62,13 +62,13 @@ class MyServer
      *
      * @param string $keyword the country name to look for
      *
-     * @return array an array of matching country names
+     * @return list<string> an array of matching country names
      */
-    public static function search($keyword)
+    public static function search(string $keyword): array
     {
         $keyword = strtolower($keyword);
 
-        include_once __DIR__ . '/countries.php';
+        $countries = require __DIR__ . '/countries.php';
 
         $return_array = [];
 

@@ -28,8 +28,7 @@ class XML_RPCAjax
         $set->addEntrySet($yui->getHtmlHeadEntrySet());
         $set->addEntry(
             new SwatJavaScriptHtmlHeadEntry(
-                'packages/xml-rpc-ajax/javascript/xml-rpc-ajax.js',
-                self::PACKAGE_ID
+                'packages/xml-rpc-ajax/javascript/xml-rpc-ajax.js'
             )
         );
 

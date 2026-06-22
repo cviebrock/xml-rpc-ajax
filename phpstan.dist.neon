@@ -1,0 +1,9 @@
+parameters:
+  phpVersion: 80200
+  level: 6
+  paths:
+    - tests
+    - XML
+  editorUrl: '%%relFile%%:%%line%%'
+  editorUrlTitle: '%%relFile%%:%%line%%'
+  errorFormat: table

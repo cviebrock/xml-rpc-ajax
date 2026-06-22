@@ -22,15 +22,6 @@
       "email": "nick@silverorange.com"
     }
   ],
-  "repositories": [
-    {
-      "type": "composer",
-      "url": "https://composer.silverorange.com",
-      "only": [
-        "silverorange/*"
-      ]
-    }
-  ],
   "autoload": {
     "psr-0": {
       "XML_RPCAjax": ""
@@ -41,16 +32,17 @@
     "silverorange/swat": "^7.0.0"
   },
   "require-dev": {
-    "friendsofphp/php-cs-fixer": "^3.64",
-    "phpstan/phpstan": "^1.12",
-    "rector/rector": "^1.2",
-    "silverorange/php-coding-tools": "^1.4",
+    "friendsofphp/php-cs-fixer": "3.88.2",
+    "phpstan/phpstan": "^2.2",
+    "rector/rector": "^2.4",
     "silverorange/xml_rpc2": "^2.0"
   },
   "scripts": {
     "phpcs": "./vendor/bin/php-cs-fixer check --config=./.php-cs-fixer.php -v",
+    "phpcs:ci": "./vendor/bin/php-cs-fixer check --no-interaction --show-progress=none --diff --using-cache=no -vvv",
     "phpcs:fix": "./vendor/bin/php-cs-fixer fix --config=./.php-cs-fixer.php -v",
     "phpstan": "./vendor/bin/phpstan analyze",
+    "phpstan:ci": "./vendor/bin/phpstan analyze -vvv --no-progress --memory-limit 2G",
     "rector": "./vendor/bin/rector --dry-run",
     "rector:fix": "./vendor/bin/rector"
   },
