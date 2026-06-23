@@ -16,7 +16,6 @@ yarn-error.log*
 
 # dependency lock files
 composer.lock
-pnpm-lock.yaml
 
 # local dev
 phpstan.dist.neon
