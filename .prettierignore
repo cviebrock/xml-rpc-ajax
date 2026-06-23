@@ -1,4 +1,5 @@
 composer.lock
+pnpm-lock.yaml
 yarn.lock
 packages.lock
 /node_modules

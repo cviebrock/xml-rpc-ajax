@@ -14,6 +14,8 @@ yarn-debug.log*
 yarn-error.log*
 *.swp
 
-# dependency lock file
+# dependency lock files
 composer.lock
-yarn.lock
+
+# local dev
+phpstan.dist.neon
