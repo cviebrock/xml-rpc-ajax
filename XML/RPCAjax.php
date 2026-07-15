@@ -5,7 +5,7 @@ declare(strict_types=1);
 /**
  * The initial setup of an XML-RPC Ajax component.
  *
- * @copyright 2005-2016 silverorange
+ * @copyright 2005-2026 silverorange
  * @license   http://www.gnu.org/copyleft/lesser.html LGPL License 2.1
  */
 class XML_RPCAjax
