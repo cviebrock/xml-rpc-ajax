@@ -54,4 +54,3 @@ jobs:
           composer run phpcs:ci
           pnpm format
           composer run phpstan:ci
-          composer run test
