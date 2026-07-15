@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /**
  * The initial setup of an XML-RPC Ajax component.
  *
@@ -20,7 +22,7 @@ class XML_RPCAjax
      *                              containing the required JavaScript files
      *                              for an AJAX XML-RPC client
      */
-    public static function getHtmlHeadEntrySet()
+    public static function getHtmlHeadEntrySet(): SwatHtmlHeadEntrySet
     {
         $set = new SwatHtmlHeadEntrySet();
 
