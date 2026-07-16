@@ -52,7 +52,7 @@ class MyServer
      *
      * @return string the product
      */
-    public static function multiply($x, $y)
+    public static function multiply(int $x, int $y): string
     {
         return number_format($x * $y, 2);
     }
@@ -68,11 +68,12 @@ class MyServer
     {
         $keyword = strtolower($keyword);
 
+        /** @var list<string> $countries */
         $countries = require __DIR__ . '/countries.php';
 
         $return_array = [];
 
-        if ($keyword != '') {
+        if ($keyword !== '') {
             foreach ($countries as $country) {
                 if (str_contains(strtolower($country), $keyword)) {
                     $return_array[] = $country;
@@ -90,5 +91,6 @@ class MyServer
     }
 }
 
-$server = XML_RPC2_Server::create('MyServer');
+/** @var XML_RPC2_Server $server */
+$server = XML_RPC2_Server::create(MyServer::class);
 $server->handleCall();
